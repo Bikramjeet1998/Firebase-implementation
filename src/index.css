@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.react-tel-input .form-control{
+    width: 100% !important;
+}
+.search-box{
+    position: relative !important;
+    width: 94% !important;
+}
+
+*{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.country{
+    display: flex;
+    justify-content: start;
+    padding: 0 25px;
+    gap: 11px;
+    align-items: center;
+    margin-left: 10px;
+}
