@@ -16,6 +16,11 @@ export default function Success() {
         }
     }, [data, navigate]);
 
+    const logout = () => {
+        localStorage.clear();
+        navigate('/');
+    }
+
     return (
         <div>
             <BackgroundBeams />
@@ -33,6 +38,7 @@ export default function Success() {
                         <DetailRow label="Source ID" subLabel="Why" detail={<>On-DemanId ID Application <br /><div className="text-sm text-slate-500">(Five DIMENSIONS Workflow)</div></>} bgColor="bg-orange-500" />
                     </div>
                 </div>
+                <button className="absolute top-5 right-5 text-white bg-red-500 px-4 py-2 rounded text-lg" onClick={logout}>Logout</button>
             </div>  
         </div>
     );
