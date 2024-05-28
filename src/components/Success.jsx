@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BackgroundBeams } from "../components/ui/background-beams";
+import FileUpload from './FileUpload';
 
 export default function Success() {
     const navigate = useNavigate();
@@ -24,19 +25,21 @@ export default function Success() {
     return (
         <div>
             <BackgroundBeams />
+
             
 
             <div className="min-h-screen bg-gray-700 bg-gradient-to-b from-gray-950 flex justify-center items-center">
                 <div className="w-3/5 max-w-5xl p-5 md:p-10 z-10">
-                    <h2 className="text-3xl font-bold text-white text-center mb-4">User Verified</h2>
-                    <h4 className="text-lg font-semibold text-white text-center mb-4">Five Dimensions of IDENTITY in 1-Click</h4>
-                    <div className="bg-white shadow-md rounded-lg p-6 divide-y divide-gray-200">
+                    <FileUpload/>
+                    {/* <h2 className="text-3xl font-bold text-white text-center mb-4">User Verified</h2>
+                    <h4 className="text-lg font-semibold text-white text-center mb-4">Five Dimensions of IDENTITY in 1-Click</h4> */}
+                    {/* <div className="bg-white shadow-md rounded-lg p-6 divide-y divide-gray-200">
                         <DetailRow label="Biometric ID" subLabel="Who" detail={data?.name} bgColor="bg-red-500" />
                         <DetailRow label="Trusted Device" subLabel="What" detail={data?.imei} bgColor="bg-gray-900" />
                         <DetailRow label="GPS Location" subLabel="Where" detail={data?.address} bgColor="bg-purple-900" />
                         <DetailRow label="Time Stamp" subLabel="When" detail={timeString} bgColor="bg-yellow-400" />
                         <DetailRow label="Source ID" subLabel="Why" detail={<>On-DemanId ID Application <br /><div className="text-sm text-slate-500">(Five DIMENSIONS Workflow)</div></>} bgColor="bg-orange-500" />
-                    </div>
+                    </div> */}
                 </div>
                 <button className="absolute top-5 right-5 text-white bg-red-500 px-4 py-2 rounded text-lg" onClick={logout}>Logout</button>
             </div>  
