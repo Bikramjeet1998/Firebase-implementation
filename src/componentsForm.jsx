@@ -2,8 +2,8 @@ import PhoneInput from "react-phone-input-2";
 import { Button } from "@nextui-org/react";
 import { Timer } from "./components/Timer.jsx";
 import * as PropTypes from "prop-types";
-import { auth, facebookProvider } from './firebaseConfig';
-import { signInWithPopup } from 'firebase/auth';
+import { auth, facebookProvider } from "./firebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 
 Form.propTypes = {
   loading: PropTypes.bool,
@@ -40,13 +40,13 @@ export function Form(props) {
       const result = await signInWithPopup(auth, facebookProvider);
       // The signed-in user info.
       const user = result.user;
-      console.log('User Info:', user);
+      console.log("User Info:", user);
       // You can save the user info to your state, context, or store it in local storage/session storage
     } catch (error) {
-      console.error('Error during Facebook login:', error);
+      console.error("Error during Facebook login:", error);
       // Handle errors here
     }
-  }
+  };
 
   return (
     <>
@@ -89,11 +89,11 @@ export function Form(props) {
               onClick={props.onClick}
             >
               <span className="flex flex-row gap-3 items-center justify-between">
-              <img src="https://ivalt.com/wp-content/themes/t466jHjHxHAGxHAGqd_ivalt/images/favicon.png" width="25px" />
-                <span className="text-white">
-
-              {props.btnTitle}
-                </span>
+                <img
+                  src="https://ivalt.com/wp-content/themes/t466jHjHxHAGxHAGqd_ivalt/images/favicon.png"
+                  width="25px"
+                />
+                <span className="text-white">{props.btnTitle}</span>
               </span>
             </Button>
 
@@ -102,17 +102,23 @@ export function Form(props) {
                 <Timer minutes={props.minutes} seconds={props.seconds} />
               </div>
             )}
-            <div className="text-slate-600 text-sm mt-2 my-1 text-center"> OR</div>
+            <div className="text-slate-600 text-sm mt-2 my-1 text-center">
+              {" "}
+              OR
+            </div>
             <Button
               className="mt-2 w-full rounded-md bg-blue-200 shadow-sm text-white"
               size="md"
               onClick={handleFacebookLogin}
             >
               <span className="flex items-center justify-between gap-4">
-                <img width="25px" src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="facebook"/>
+                <img
+                  width="25px"
+                  src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                  alt="facebook"
+                />
                 <span className="text-slate-900">Login with Facebook</span>
               </span>
-              
             </Button>
           </div>
         </div>
